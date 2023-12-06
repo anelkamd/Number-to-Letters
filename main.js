@@ -4,16 +4,16 @@ function num2Letters(number) {
     if (isNaN(number) || number < 0 || 999 < number) {
         return 'Veuillez entrer un nombre entier compris entre 0 et 999.';
     }
-    var units2Letters = ['', 'un', 'deux', 'trois', 'quatre',
+    let units2Letters = ['', 'un', 'deux', 'trois', 'quatre',
         'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze',
         'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit',
         'dix-neuf'],
         tens2Letters = ['', 'dix', 'vingt', 'trente', 'quarante',
             'cinquante', 'soixante', 'soixante', 'quatre-vingt', 'quatrevingt'];
-    var units = number % 10,
+    let units = number % 10,
         tens = (number % 100 - units) / 10,
         hundreds = (number % 1000 - number % 100) / 100;
-    var unitsOut, tensOut, hundredsOut;
+    let unitsOut, tensOut, hundredsOut;
     if (number === 0) {
         return 'zéro';
     } else {
@@ -42,7 +42,7 @@ function num2Letters(number) {
             + unitsOut;
     }
 }
-var userEntry;
+let userEntry;
 while (userEntry = prompt('Veuillez saisir le nombre à écrire en toutes lettres (entre 0 et 999) :')) {
     alert(num2Letters(parseInt(userEntry, 10)));
 }
