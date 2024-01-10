@@ -1,4 +1,4 @@
-// Coding by Anelka MD
+// Coding by Anelka MD © 2024
 
 function num2Letters(number) {
     if (isNaN(number) || number < 0 || 999 < number) {
